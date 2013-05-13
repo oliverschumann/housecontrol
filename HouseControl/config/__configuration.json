@@ -1,0 +1,78 @@
+{
+	"configuration": {
+		"temperatures": {
+			"hotwater": 48,
+			"egv": 33,
+			"ogv": 40
+		},
+		"scheduler": {
+			"baseTasks": {
+				"logIntervall": 300,
+				"baseTemperatureUpdateIntervall": 60,
+				"highfrequencyTemperatureUpdateIntervall": 15
+			},
+			"heatingTasks": {
+				"task": [
+					{
+						"type": "changeHeatingStatus",
+						"name": "0630+EG",
+						"schedule": {
+							"type": "cron",
+							"hour": 6,
+							"minute": 30
+						},
+						"status": {
+							"Obergeschoss": 0,
+							"Erdgeschoss": 1,
+							"Brauchwasser": 0,
+							"Zirkulationspumpe": 0
+						}
+					}, {
+						"type": "changeHeatingStatus",
+						"name": "0930-ALL",
+						"schedule": {
+							"type": "cron",
+							"hour": 9,
+							"minute": 30
+						},
+						"status": {
+							"Obergeschoss": 0,
+							"Erdgeschoss": 0,
+							"Brauchwasser": 0,
+							"Zirkulationspumpe": 0
+						}
+					}, {
+						"type": "changeHeatingStatus",
+						"name": "1700+EG",
+						"schedule": {
+							"type": "cron",
+							"hour": 17,
+							"minute": 0
+						},
+						"status": {
+							"Obergeschoss": 0,
+							"Erdgeschoss": 1,
+							"Brauchwasser": 0,
+							"Zirkulationspumpe": 0
+						}
+					}, {
+						"type": "changeHeatingStatus",
+						"name": "2030-ALL",
+						"schedule": {
+							"type": "cron",
+							"hour": 20,
+							"minute": 30
+						},
+						"status": {
+							"Obergeschoss": 0,
+							"Erdgeschoss": 0,
+							"Brauchwasser": 0,
+							"Zirkulationspumpe": 0
+						}
+					}
+				]
+			},
+			"blindTasks": ""
+		}
+	}
+}

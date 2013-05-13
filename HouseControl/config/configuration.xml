@@ -1,0 +1,153 @@
+<configuration>
+	<temperatures>
+		<hotwater>48</hotwater>
+		<egv>28</egv>
+		<ogv>40</ogv>
+	</temperatures>
+	<scheduler>
+		<baseTasks>
+			<logIntervall>300</logIntervall>
+			<baseTemperatureUpdateIntervall>60</baseTemperatureUpdateIntervall>
+			<highfrequencyTemperatureUpdateIntervall>20</highfrequencyTemperatureUpdateIntervall>
+		</baseTasks>
+		<heatingTasks>
+			<task type="changeHeatingStatus" name="">
+				<schedule type="date">
+					<year>2012</year>
+					<month>12</month>
+					<day>12</day>
+					<hour>12</hour>
+					<minute>12</minute>
+					<second>12</second>
+				</schedule>
+				<status>
+					<Obergeschoss/>
+					<Erdgeschoss/>
+					<Brauchwasser/>
+					<Zirkulationspumpe/>
+				</status>
+			</task>
+			<task type="changeHeatingStatus" name="">
+				<schedule type="cron">
+					<hour>5</hour>
+					<minute>0</minute>
+				</schedule>
+				<status>
+					<Obergeschoss/>
+					<Erdgeschoss>1</Erdgeschoss>
+					<Brauchwasser>1</Brauchwasser>
+					<Zirkulationspumpe></Zirkulationspumpe>
+				</status>
+			</task>
+			<task type="changeHeatingStatus" name="">
+				<schedule type="cron">
+					<hour>6</hour>
+					<minute>0</minute>
+				</schedule>
+				<status>
+					<Obergeschoss>1</Obergeschoss>
+					<Erdgeschoss></Erdgeschoss>
+					<Brauchwasser></Brauchwasser>
+					<Zirkulationspumpe></Zirkulationspumpe>
+				</status>
+			</task>
+			<task type="changeHeatingStatus" name="">
+				<schedule type="cron">
+					<hour>7</hour>
+					<minute>40</minute>
+				</schedule>
+				<status>
+					<Obergeschoss>0</Obergeschoss>
+					<Erdgeschoss></Erdgeschoss>
+					<Brauchwasser>0</Brauchwasser>
+					<Zirkulationspumpe></Zirkulationspumpe>
+				</status>
+			</task>
+			<task type="changeHeatingStatus" name="">
+				<schedule type="cron">
+					<hour>9</hour>
+					<minute>30</minute>
+				</schedule>
+				<status>
+					<Obergeschoss>0</Obergeschoss>
+					<Erdgeschoss>0</Erdgeschoss>
+					<Brauchwasser>0</Brauchwasser>
+					<Zirkulationspumpe>0</Zirkulationspumpe>
+				</status>
+			</task>
+			<task type="changeHeatingStatus" name="">
+				<schedule type="cron">
+					<hour>12</hour>
+					<minute>30</minute>
+				</schedule>
+				<status>
+					<Obergeschoss>1</Obergeschoss>
+					<Erdgeschoss>1</Erdgeschoss>
+					<Brauchwasser>1</Brauchwasser>
+					<Zirkulationspumpe>1</Zirkulationspumpe>
+				</status>
+			</task>
+			<task type="changeHeatingStatus" name="">
+				<schedule type="cron">
+					<hour>13</hour>
+					<minute>30</minute>
+				</schedule>
+				<status>
+					<Obergeschoss>0</Obergeschoss>
+					<Erdgeschoss>0</Erdgeschoss>
+					<Brauchwasser>0</Brauchwasser>
+					<Zirkulationspumpe>0</Zirkulationspumpe>
+				</status>
+			</task>
+			<task type="changeHeatingStatus" name="">
+				<schedule type="cron">
+					<hour>16</hour>
+					<minute>0</minute>
+				</schedule>
+				<status>
+					<Obergeschoss></Obergeschoss>
+					<Erdgeschoss>1</Erdgeschoss>
+					<Brauchwasser></Brauchwasser>
+					<Zirkulationspumpe></Zirkulationspumpe>
+				</status>
+			</task>
+			<task type="changeHeatingStatus" name="">
+				<schedule type="cron">
+					<hour>16</hour>
+					<minute>30</minute>
+				</schedule>
+				<status>
+					<Obergeschoss>1</Obergeschoss>
+					<Erdgeschoss></Erdgeschoss>
+					<Brauchwasser></Brauchwasser>
+					<Zirkulationspumpe></Zirkulationspumpe>
+				</status>
+			</task>
+			<task type="changeHeatingStatus" name="">
+				<schedule type="cron">
+					<hour>17</hour>
+					<minute>0</minute>
+				</schedule>
+				<status>
+					<Obergeschoss></Obergeschoss>
+					<Erdgeschoss></Erdgeschoss>
+					<Brauchwasser>1</Brauchwasser>
+					<Zirkulationspumpe></Zirkulationspumpe>
+				</status>
+			</task>
+			<task type="changeHeatingStatus" name="">
+				<schedule type="cron">
+					<hour>20</hour>
+					<minute>30</minute>
+				</schedule>
+				<status>
+					<Obergeschoss>0</Obergeschoss>
+					<Erdgeschoss>0</Erdgeschoss>
+					<Brauchwasser>0</Brauchwasser>
+					<Zirkulationspumpe>0</Zirkulationspumpe>
+				</status>
+			</task>
+		</heatingTasks>
+		<blindTasks/>
+	</scheduler>
+</configuration>

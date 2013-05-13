@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ $1 ]
+then
+sleep $1
+fi
+sudo i2cset -y 0 0x45 0x3d 0x00
+sudo i2cset -y 0 0x45 0x3e 0x00
+
+exit 0

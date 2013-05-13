@@ -1,0 +1,10 @@
+#!/bin/bash
+sudo i2cset -y 0 0x45 0x3e 0x00
+sleep 0.2
+sudo i2cset -y 0 0x45 0x3d 0xff
+if [ $1 ]
+then
+	sleep $1
+	sudo i2cset -y 0 0x45 0x3d 0x00
+fi
+exit 0
